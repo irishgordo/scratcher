@@ -9,7 +9,7 @@ def fib_memoized(n):
         return 0
     elif n == 1:
         return 1
-    elif f'{n}' not in MEMO_MAP.keys():
+    elif f'{n}' not in MEMO_MAP:
         MEMO_MAP[f'{n}'] = fib_memoized(n-1) + fib_memoized(n-2)
     
     return MEMO_MAP[f'{n}']
